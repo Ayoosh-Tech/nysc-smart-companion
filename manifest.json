@@ -1,7 +1,7 @@
 {
   "name": "NYSC Smart Companion",
   "short_name": "NYSC Companion",
-  "start_url": "/nysc-smart-companion/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#22c55e",
