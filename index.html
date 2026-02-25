@@ -284,6 +284,10 @@ body.dark #home::before {
     <div class="content">
 
         <div id="home">
+            
+            <!--   <div style="text-align:center; margin-bottom:20px;">
+        <img src="image/corper.png" alt="Corper" width="200">
+    </div> -->
                         <div class="card">
                 Welcome to NYSC Smart Companion 👋
             </div>
@@ -473,13 +477,20 @@ document.addEventListener('keydown', function(e) {
 
 </script>
 
-
 <script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js")
-      .then(() => console.log("Service Worker Registered"));
-  }
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/nysc-smart-companion/service-worker.js')
+      .then(function(registration) {
+        console.log('ServiceWorker registered');
+      })
+      .catch(function(error) {
+        console.log('ServiceWorker registration failed:', error);
+      });
+  });
+}
 </script>
+
 </body>
 
 </html>
